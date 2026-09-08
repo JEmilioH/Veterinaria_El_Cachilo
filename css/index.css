@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(252, 245, 238);
+}
+
+.hero {
+    width: 100%;
+    height: 75vh;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    width: 100%;
+    height: inherit;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+#hero-texto {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    text-align: left;
+}
+
+.hero video {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 6.5rem;
+    text-align: left;
+    font-family: var(--fuente-texto-3);
+    font-weight: 700;
+    padding-left: 100px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-family: var(--fuente-texto-3);
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding-left: 100px;
+    margin-top: 0px;
+}
+
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 50px;
+    gap: 50px 0px;
+}
+
+.card {
+    background-color: var(--color-fondo-pagina);
+    width: 400px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px var(--color-borde-2);
+    transition: all 0.3s linear;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.text_card {
+    padding: 10px;
+    font-family: var(--fuente-texto-3);
+    box-sizing: border-box;
+}
+
+.text_card p {
+    padding: 10px;
+}
+
+.text_card h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    letter-spacing: 3px;
+}
+
+.btn_mas {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: var(--color-borde-1);
+    text-decoration: none;
+    color: white;
+    font-family: var(--fuente-texto-3);
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_mas:hover {
+    background-color: var(--color-fondo-tarjeta);
+    color: var(--color-borde-1);
+    font-weight: bold;
+}
