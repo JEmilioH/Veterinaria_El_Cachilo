@@ -1,0 +1,106 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    box-sizing: border-box;
+    font-family: var(--fuente-texto-3);
+    gap: 50px;
+    padding: 80px 30px;
+}
+
+main > div {
+    min-width: 0;
+}
+
+.header_contacto h1 {
+    font-size: 2.5rem;
+}
+
+.header_contacto p {
+    font-size: 1.2rem;
+}
+
+.formulario {
+    margin: auto;
+    padding: 1.5rem;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--color-borde-1);
+}
+
+.formulario h2 {
+    font-size: 2rem;
+    font-family: var(--fuente-titulos);
+}
+
+.form_inputs {
+    margin: 2rem 0 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    color: var(--color-texto-principal);
+}
+
+.label_formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input {
+    grid-area: input;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde-1);
+    padding: 0.7rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.area_mensaje {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde-1);
+    padding: 0.7rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.form_text {
+    width: max-content;
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.form_input::placeholder, .area_mensaje::placeholder {
+    color: var(--color-texto-atenuado);
+}
+
+.form_input:focus::placeholder, .area_mensaje:focus::placeholder {
+    color: transparent;
+    opacity: 0;
+}
+
+.form_submit {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: var(--color-borde-1);
+    padding: 1rem 2rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form_submit:hover {
+    background-color: var(--color-texto-atenuado);
+    color: var(--color-borde-1);
+    cursor: pointer;
+}
+
+.imagen_contacto img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
