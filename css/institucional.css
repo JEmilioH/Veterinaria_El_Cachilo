@@ -2,13 +2,14 @@
 main .banner {
   position: relative;
   text-align: center;
+  width: 100%;
+  padding: 0;
 }
 
 main .banner img {
   width: 100%;
   height: 550px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 main .banner-text {
