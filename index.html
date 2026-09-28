@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -11,8 +13,11 @@
 </head>
 
 <body>
-    <header class= "header">
-        <div id= "logo">
+    <!-- Se utiliza bootstrap.bundle.min.js para que funcionen los botones adelante y atrás del carrousel-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <header class="header">
+        <div id="logo">
             <img src="./assets/images/logo 200px.png" alt="Imagen del logo de la veterinaria">
         </div>
 
@@ -32,77 +37,178 @@
 
     <main class="main">
         <section class="hero">
-            <div id="hero-texto">
-                <h1>Veterinaria <br> El Cachilo</h1>
-                <p>Mantenemos tu mascota <br> alegre y saludable</p>
-            </div>
-            <video autoplay muted loop>
-                <source src="./assets/videos/Pet-Vet-Homepage-loop_04.mp4" type="video/mp4">
-            </video>
-        
-        </section>
-        <section class="cards_container">
-            <div class="card">
-                <img src="./assets/images/vacunacion.webp" alt="Vaccunación">
-                <div class="text_card">
-                    <h2>VACUNACIÓN</h2>     
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem      accusantium doloremque laudantium, totam rem aperiam."</p>
-                    <a href="#" class="btn_mas">Saber más</a>
+            <div class="container-fluid px-0 py-0">
+                <div id="hero-texto">
+                    <h1 class="display-1 fw-bolder m-0">Veterinaria <br> El Cachilo</h1>
+                    <p class="mt-0 fs-1">Mantenemos tu mascota <br> alegre y saludable</p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/cirugia.webp" alt="Cirugía">
-                <div class="text_card">
-                    <h2>CIRUGÍAS</h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."</p>
-                    <a href="#" class="btn_mas">Saber más</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/internacion.png" alt="Hospitalización">
-                <div class="text_card">
-                    <h2>HOSPITALIZACIÓN</h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."</p>
-                    <a href="#" class="btn_mas">Saber más</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/ecografia.png" alt="Diagnóstico por imágenes">
-                <div class="text_card">
-                    <h2>DIAGNÓSTICO POR IMAGEN</h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."</p>
-                    <a href="#" class="btn_mas">Saber más</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/odontologia2.jfif" alt="Odontología">
-                <div class="text_card">
-                    <h2>ODONTOLOGÍA</h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."</p>
-                    <a href="#" class="btn_mas">Saber más</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/images/urgencias.webp" alt="">
-                <div class="text_card">
-                    <h2>EMERGENCIAS 24 HS.</h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                    <a href="#" class="btn_mas">Saber más</a>
+                <div class="ratio ratio-16x9">
+                    <video src="./assets/videos/Pet-Vet-Homepage-loop_04.mp4" class="object-fit-cover" muted autoplay loop></video>
                 </div>
             </div>
         </section>
+
+        <section class="profesionales">
+            <div class="container mt-5">
+                <div class="row py-4">
+                    <h1 class="display-6 fw-medium text-center">NUESTROS ESPECIALISTAS</h1>
+                </div>
+                <div class="row justify-content-center g-4 py-0">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./assets/images/veterinario-1.gif" class="card-img-top" alt="Médico veterinario">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Dra. Sandra Gómez</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, in! Numquam beatae officia hic porro magni quibusdam error necessitatibus illo?</p>
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./assets/images/veterinario-2.jfif" class="card-img-top" alt="Médico Veterinario">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Dr. Juan Pérez</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor deleniti perferendis ipsa magnam nemo velit vero maxime! Tempora, quasi doloribus.</p>
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./assets/images/veterinario-3.avif" class="card-img-top" alt="Médico Veterinario">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Dra. Alicia Bustamante</h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quidem quae recusandae quos quaerat libero, ad aliquam qui esse facilis?</p>
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./assets/images/veterinario-4.jfif" class="card-img-top" alt="Médico Veterinario">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Dr. Eduardo Montoya</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, distinctio fugiat optio similique impedit eius ea rem asperiores quidem odio.</p>
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./assets/images/tecnico_imagenes.jpg" class="card-img-top" alt="Técnico en Imágenes">
+                            <div class="card-body">
+                                <h5 class="card-title">Lic. Mariano Gómez</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ratione ut fugit ipsa magni reiciendis explicabo ipsam itaque tenetur voluptate.</p>
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./assets/images/bioquimica-1.avif" class="card-img-top" alt="Bioquímica">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Lic. Sandra Santiago</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam rem facilis magni veniam ea ipsa inventore sapiente. Recusandae, quidem eveniet.</p>
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+        </section>
+
+        <section id="carouselfinal" class="carousel slide">
+            <div class="row py-4 mt-5">
+                <h1 class="display-6 fw-medium text-center mt-5">NUESTROS SERVICIOS</h1>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselfinal" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselfinal" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselfinal" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselfinal" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselfinal" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselfinal" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active item-carousel">
+                    <img src="./assets/images/vacunacion.webp" class="d-block w-100 imagen-carousel" alt="Imagen de perro con vacuna">
+                    <div class="carousel-caption top-0 mt-4">
+                        <h1 class="display-1 fw-bolder m-0">VACUNACIÓN</h1>
+                        <p class="mt-3 fs-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur atque tempore soluta debitis, consequuntur nesciunt ullam nulla laborum non dolores!</p>
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-3">Saber más</button>
+                    </div>
+                </div>
+                <div class="carousel-item item-carousel">
+                    <img src="./assets/images/cirugia.webp" class="d-block w-100 imagen-carousel" alt="Imagen de perro en quirófano">
+                    <div class="carousel-caption top-0 mt-4">
+                        <h1  class="display-1 fw-bolder m-0">CIRUGÍAS</h1>
+                        <p  class="mt-3 fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea optio accusamus quasi ratione quos architecto consequatur laborum illum hic veniam.</p>
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-3">Saber más</button>
+                    </div>
+                </div>
+                <div class="carousel-item item-carousel">
+                    <img src="./assets/images/internacion.png" class="d-block w-100 imagen-carousel" alt="Imagen de perro en internación">
+                    <div class="carousel-caption top-0 mt-4">
+                        <h1  class="display-1 fw-bolder m-0">HOSPITALIZACIÓN</h1>
+                        <p  class="mt-3 fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dolor. Nobis asperiores perspiciatis aliquid dolorum natus sequi, quod nisi. Accusamus?</p>
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-3">Saber más</button>
+                    </div>
+                </div>
+                <div class="carousel-item item-carousel">
+                    <img src="./assets/images/ecografia.png" class="d-block w-100 imagen-carousel" alt="Imagen de perro con ecógrafo">
+                    <div class="carousel-caption top-0 mt-4">
+                        <h1  class="display-1 fw-bolder m-0">DIAGNÓSTICO POR IMAGEN</h1>
+                        <p  class="mt-3 fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi laboriosam eum tenetur esse ratione ut voluptatem a dolores iure!</p>
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-3">Saber más</button>
+                    </div>
+                </div>
+                <div class="carousel-item item-carousel">
+                    <img src="./assets/images/odontologia2.jfif" class="d-block w-100 imagen-carousel" alt="Imagen de gato en control odontológico">
+                    <div class="carousel-caption top-0 mt-4">
+                        <h1  class="display-1 fw-bolder m-0">ODONTOLOGÍA</h1>
+                        <p  class="mt-3 fs-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi odio quia iusto libero ipsum magnam nihil hic explicabo repellat quo!</p>
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-3">Saber más</button>
+                    </div>
+                </div>
+                <div class="carousel-item item-carousel">
+                    <img src="./assets/images/urgencias.webp" class="d-block w-100 imagen-carousel" alt="Imagen de urgencias las 24 horas">
+                    <div class="carousel-caption top-0 mt-4">
+                        <h1  class="display-1 fw-bolder m-0">EMERGENCIAS 24 HS.</h1>
+                        <p  class="mt-3 fs-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus voluptatibus, provident quae facere unde rem! Cum id odio corrupti ut.</p>
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-3">Saber más</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselfinal"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselfinal"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
     </main>
 
     <footer class="contenedor_footer">
         <div class="texto">
             <h3>Somos El Cachilo, una veterinaria con atención especializada,
-            diagnóstico por imágenes, laboratorio, cirugías, internación
-            y guardia las 24hs.
-            Brindamos atención integral para perros
-            y gatos en el corazón de Frías, Santiago del Estero.</h3>
+                diagnóstico por imágenes, laboratorio, cirugías, internación
+                y guardia las 24hs.
+                Brindamos atención integral para perros
+                y gatos en el corazón de Frías, Santiago del Estero.</h3>
         </div>
-
-        <div class="redes_footer">    
+        <div class="redes_footer">
             <h2>Nuestras Redes:</h2>
             <div class="ico_redes">
                 <a href="https://www.instagram.com/" target="_blank">
@@ -119,25 +225,23 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="ubicacion">
             <div class="direccion">
                 <h2>Donde estamos:</h2>
                 <p>Av. Siempreviva N° 742 <br>
-                Frias, Santiago del Estero</p>
+                    Frias, Santiago del Estero</p>
                 <br>
                 <h2>Nuestros horarios:</h2>
                 <p>Lunes a Viernes: 09:00 a 20:00 hs. <br>
-                Sábados: 09:00 a 13:00 hs. <br>
-                Urgencias las 24 hs.</p>
+                    Sábados: 09:00 a 13:00 hs. <br>
+                    Urgencias las 24 hs.</p>
             </div>
             <div id="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33522.456046041356!2d-65.14693226176308!3d-28.63570417591444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9425a84f49ae19cf%3A0xfaeb099e28896605!2sFr%C3%ADas%2C%20Santiago%20del%20Estero!5e1!3m2!1ses-419!2sar!4v1788669154196!5m2!1ses-419!2sar" 
-                width= 330vw 
-                height= 300vw 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33522.456046041356!2d-65.14693226176308!3d-28.63570417591444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9425a84f49ae19cf%3A0xfaeb099e28896605!2sFr%C3%ADas%2C%20Santiago%20del%20Estero!5e1!3m2!1ses-419!2sar!4v1788669154196!5m2!1ses-419!2sar"
+                    width=330vw height=300vw style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
         </div>
     </footer>

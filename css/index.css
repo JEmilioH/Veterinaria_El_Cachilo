@@ -4,7 +4,7 @@ body {
 
 .hero {
     width: 100%;
-    height: 75vh;
+    height: 70vh;
     background-color: #fff;
     color: #fff;
     text-align: center;
@@ -28,97 +28,69 @@ body {
     width: 100%;
     position: absolute;
     display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     flex-direction: column;
+    align-items: center;
     z-index: 3;
-    text-align: left;
+    text-align: center;
 }
 
 .hero video {
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    min-width: 991.99px;
+    height: auto;
+    overflow-x: hidden;
+    z-index: -999;
 }
 
 .hero h1 {
-    font-size: 6.5rem;
-    text-align: left;
+    text-align: center;
     font-family: var(--fuente-texto-3);
-    font-weight: 700;
-    padding-left: 100px;
-    margin-bottom: 10px;
 }
 
 .hero p {
     font-family: var(--fuente-texto-3);
-    font-size: 3.5rem;
-    font-weight: 700;
-    padding-left: 100px;
-    margin-top: 0px;
+    text-align: center;
 }
 
-.cards_container {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin: 50px;
-    gap: 50px 0px;
-}
-
-.card {
-    background-color: var(--color-fondo-pagina);
-    width: 400px;
+.profesionales .card {
+    height: 40rem;
+    overflow: hidden;
     border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 4px 4px 10px var(--color-borde-2);
-    transition: all 0.3s linear;
+    box-shadow: 4px 4px 10px var(--color-borde-1)
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 400px;
-    height: 400px;
+.profesionales .card-img-top {
+    height: 25rem;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
 }
 
-.text_card {
-    padding: 10px;
-    font-family: var(--fuente-texto-3);
-    box-sizing: border-box;
-}
-
-.text_card p {
-    padding: 10px;
-}
-
-.text_card h2 {
+.profesionales .card-body {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-size: 1.6rem;
-    margin-top: 10px;
-    letter-spacing: 3px;
 }
 
-.btn_mas {
-    width: 100%;
-    display: block;
-    text-align: center;
-    background-color: var(--color-borde-1);
-    text-decoration: none;
-    color: white;
-    font-family: var(--fuente-texto-3);
-    font-size: 1rem;
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+.profesionales .card-text {
+    flex-grow: 1;
 }
 
-.btn_mas:hover {
-    background-color: var(--color-fondo-tarjeta);
-    color: var(--color-borde-1);
-    font-weight: bold;
+.profesionales .card-body .btn {
+    margin-top: auto;
+}
+
+.item-carousel {
+    height: 65vh;
+}
+
+.imagen-carousel {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
 }
