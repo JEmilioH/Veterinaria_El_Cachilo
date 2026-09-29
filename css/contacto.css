@@ -1,15 +1,13 @@
 main {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); */
     box-sizing: border-box;
     font-family: var(--fuente-texto-3);
     gap: 50px;
     padding: 80px 30px;
 }
 
-main > div {
-    min-width: 0;
-}
+
 
 .header_contacto h1 {
     font-size: 2.5rem;
@@ -19,32 +17,29 @@ main > div {
     font-size: 1.2rem;
 }
 
-.formulario {
-    margin: auto;
-    padding: 1.5rem;
-    background-color: white;
+#contacto{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 0 0 20px var(--color-borde-1);
+    margin-bottom: 3rem;
 }
 
-.formulario h2 {
-    font-size: 2rem;
-    font-family: var(--fuente-titulos);
-}
-
-.form_inputs {
-    margin: 2rem 0 1.5rem;
-    display: grid;
-    gap: 1.5rem;
-    color: var(--color-texto-principal);
+#contacto div{
+    border-radius: 20px;
+    border-color: #bc6c25;
+    border-style:dashed;  
+    max-width: 900px;
 }
 
 .label_formulario {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
 }
 
 .form_input {
@@ -57,7 +52,7 @@ main > div {
 }
 
 .area_mensaje {
-    width: 100%;
+
     border-radius: 10px;
     border: 1px solid var(--color-borde-1);
     padding: 0.7rem 1.5rem;
@@ -98,9 +93,40 @@ main > div {
     cursor: pointer;
 }
 
-.imagen_contacto img {
-    display: block;
+.imagen_contacto {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    max-width: 100%;
+}
+
+.imagen_contacto img {
+    max-width: 400px;
+    width: auto;
     height: auto;
+} 
+
+.btn {
+    margin-top: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#mapa {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;
+    margin-top: 3rem;
+    
+} 
+
+
+#mapa iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
