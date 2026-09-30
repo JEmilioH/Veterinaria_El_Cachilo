@@ -4,5 +4,4 @@ Grupo N° 3
 Integrantes:
 Salas Cristian,
 Spenner Lucas,
-Montenegro Nicolás,
 Herrera Emilio
