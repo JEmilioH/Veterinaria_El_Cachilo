@@ -23,8 +23,10 @@ main {
 #contacto div {
     border-radius: 20px;
     border-color: #bc6c25;
-    border-style: dashed;  
+    border-style:ridge;  
     max-width: 900px;
+    padding: 1rem;
+    padding-top:0;
 }
 
 .label_formulario {
@@ -36,6 +38,7 @@ main {
 form {
     width: 100%;
     max-width: 500px;
+    background-color: #b7753b12;
 }
 
 .form_input {
@@ -61,6 +64,7 @@ form {
     display: flex;
     align-items: center;
     font-weight: bold;
+    color: #8e4b10;
 }
 
 .form_input::placeholder, .area_mensaje::placeholder {
@@ -118,8 +122,8 @@ form .btn {
 
 #mapa iframe {
     width: 80%;
-    max-width: 800px;
-    height: 450px;
+    max-width: 600px;
+    height: 350px;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
