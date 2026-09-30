@@ -1,13 +1,8 @@
+/* Corrección de main: eliminar el padding global */
 main {
-    /* display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); */
     box-sizing: border-box;
     font-family: var(--fuente-texto-3);
-    gap: 50px;
-    padding: 80px 30px;
 }
-
-
 
 .header_contacto h1 {
     font-size: 2.5rem;
@@ -17,17 +12,18 @@ main {
     font-size: 1.2rem;
 }
 
-#contacto{
+#contacto {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
-#contacto div{
+#contacto div {
     border-radius: 20px;
     border-color: #bc6c25;
-    border-style:dashed;  
+    border-style: dashed;  
     max-width: 900px;
 }
 
@@ -52,7 +48,6 @@ form {
 }
 
 .area_mensaje {
-
     border-radius: 10px;
     border: 1px solid var(--color-borde-1);
     padding: 0.7rem 1.5rem;
@@ -97,6 +92,7 @@ form {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 2rem;
 }
 
 .imagen_contacto img {
@@ -105,23 +101,20 @@ form {
     height: auto;
 } 
 
-.btn {
+/* Aplicar el margen superior SOLO a los botones del formulario */
+form .btn {
     margin-top: 1rem;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
+/* Se eliminaron las reglas globales de .row y .btn que rompían el navbar */
 
 #mapa {
     display: flex;
-    justify-content: center; /* Centrado horizontal */
+    justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    
+    margin-bottom: 3rem;
 } 
-
 
 #mapa iframe {
     width: 80%;
