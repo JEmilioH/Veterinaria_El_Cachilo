@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Institucional | Veterinaria El Cachilo</title>
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/institucional.css">
+  <link rel="stylesheet" href="./css/mascota.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="shortcut icon" href="./assets/images/logo_icono.ico"/>
 
@@ -51,26 +51,25 @@
 
   <main>
         <section class="banner position-relative">
-          <img src="./assets/images/perro_gato.png" class="w-100" alt="Perro y gato en clínica">
+          <img src="./assets/images/Mascotas.webp" class="w-100" alt="Perro y gato en clínica">
             <div class="position-absolute top-50 start-50 translate-middle text-center px-3">
                 <div class="banner-text">
-                    <h1>Cuidando a tus mascotas con dedicación y amor</h1>
+                    <h1>Nuestras Mascotas</h1>
                 </div>
              </div>
         </section>
 
-        #MASCOTAS        
+        <!-- MASCOTAS         -->
         <section class="container py-5">
             <div class="row g-4">
 
                 <article class="col-12 col-lg-7">
-                    <span class="badge rounded-pill text-bg-primary fw-semibold">MASCOTAS</span>
-                        <h2 class="fs-1 fw-semibold mt-2">
-                            Mascotas Registradas 
-                            <span class="badge text-bg-secondary align-middle fs-5" id="total_mascotas">
-                            0
-                            </span>
-                        </h2>
+                    <h2 class="fs-1 fw-semibold mt-2">
+                        Mascotas Registradas 
+                        <span class="badge text-bg-secondary align-middle fs-5" id="total_mascotas">
+                        0
+                        </span>
+                    </h2>
 
                     <div class="table-responsive-md">
                         <table class="table table-striped">
@@ -119,7 +118,7 @@
 
                         <div>
                             <label class="form-label" for="peso">Peso en kg</label>
-                            <input class="form-control" type="number" name="peso" id="peso" min="0" step="0.01" placeholder="Ejemplo 4.5" required>
+                            <input class="form-control" type="number" name="peso" id="peso" min="0" step="0.01" required>
                         </div>
 
                         <!-- <div>
@@ -134,6 +133,52 @@
 
             </div>
         </section>
+
+        <!-- MODAL para editar -->
+        <div class="modal fade" id="modal-editar" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar Mascota</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form id="form-editar">
+                        <div class="modal-body d-flex flex-column gap-3">
+                            <div> 
+                                <label for="editarNombreDuenio" class="form-label">Dueño</label>
+                                <input type="text" name="editarNombreDuenio" id="editarNombreDuenio" class="form-control" required>
+                            </div>
+                            <div>
+                                <label for="editarNombreMascota" class="form-label">Nombre de la Mascota</label>
+                                <input type="text" name="editarNombreMascota" id="editarNombreMascota" class="form-control" required>
+                            </div>
+                        
+                            <div>
+                                <label for="editarColor" class="form-label">Color</label>
+                                <input type="text" name="editarColor" id="editarColor" class="form-control" required>
+                            </div>
+
+                            <div>
+                                <label for="editarEdad" class="form-label">Edad</label>
+                                <input type="number" name="editarEdad" id="editarEdad" class="form-control" min="0" max="30" required>
+                            </div>
+
+                            <div>
+                                <label for="editarPeso" class="form-label">Peso en kg</label>
+                                <input type="number" name="editarPeso" id="editarPeso" class="form-control" min="0" step="0.01" required>
+                            </div>
+                        </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
     </main>
 
     <footer class="contenedor_footer">

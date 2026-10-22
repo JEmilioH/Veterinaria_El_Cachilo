@@ -1,0 +1,48 @@
+.banner img {
+  height: 480px;
+  object-fit: cover;
+}
+.banner-text {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.section-title {
+  letter-spacing: 0.5px;
+}
+
+#Nvalor {
+  letter-spacing: 1px;
+}
+
+.valor-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.valor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+.valor-card img {
+  object-fit: contain;
+}
+
+.contenedor_footer a {
+  transition: opacity 0.2s ease;
+}
+.contenedor_footer a:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 767.98px) {
+  .banner img {
+    height: 320px;
+  }
+  .banner-text {
+    padding: 0.75rem 1.25rem;
+  }
+  .banner-text h1 {
+    font-size: 1.25rem;
+  }
+}
