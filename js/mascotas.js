@@ -1,7 +1,8 @@
 const mascotas = JSON.parse(localStorage.getItem('mascotas')) || [];
 const listarMascotas = document.getElementById('listar_mascotas');
 const totalMascotas = document.getElementById('total_mascotas');
-const formulario = document.getElementById('form-mascota');
+const formularioAgregar = document.getElementById('form-agregar-mascota');
+const modalAgregar = new bootstrap.Modal(document.getElementById('modal-agregar'));
 
 const formularioEditar = document.getElementById('form-editar');
 const modalEditar = new bootstrap.Modal(document.getElementById('modal-editar'));
@@ -48,29 +49,6 @@ function guardarEnLocalStorage() {
     localStorage.setItem('mascotas', JSON.stringify(mascotas))
 }
 
-//Agregar Mascota
-formulario.addEventListener('submit', (evento) => {
-    evento.preventDefault();
-
-    const datos = new FormData(formulario);
-
-    const nuevaMascota = {
-        idMascota: crypto.randomUUID(),
-        nombreDuenio: datos.get('nombreDuenio').trim(),
-        nombreMascota: datos.get('nombreMascota').trim(),
-        color: datos.get('color').trim(),
-        edad: Number(datos.get('edad')),
-        peso: parseFloat(datos.get('peso'))
-    }
-
-    mascotas.push(nuevaMascota);
-    
-    guardarEnLocalStorage();
-
-    render();
-    formulario.reset();
-})
-
 function eliminarMascota(id) {
     const indice = mascotas.findIndex((mascota) => mascota.idMascota === id);
     mascotas.splice(indice, 1);
@@ -92,6 +70,33 @@ function editarMascota(id) {
     modalEditar.show();
 }
 
+
+//Agregar Mascota
+formularioAgregar.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    try {  
+        const datos = new FormData(formularioAgregar);
+        const nuevaMascota = {
+            idMascota: crypto.randomUUID(),
+            nombreDuenio: datos.get('nombreDuenio').trim(),
+            nombreMascota: datos.get('nombreMascota').trim(),
+            color: datos.get('color').trim(),
+            edad: Number(datos.get('edad')),
+            peso: parseFloat(datos.get('peso'))
+        }
+        mascotas.push(nuevaMascota);
+        
+        guardarEnLocalStorage();
+        render();
+        modalAgregar.hide();
+        formularioAgregar.reset();
+
+    } catch (error) {
+        console.error('Error al agregar la mascota:', error);
+    }     
+});
+
+//Modificar Mascota
 formularioEditar.addEventListener('submit', (evento) => {
     evento.preventDefault();   
     try{
