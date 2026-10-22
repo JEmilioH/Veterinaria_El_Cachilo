@@ -49,6 +49,12 @@ function guardarEnLocalStorage() {
     localStorage.setItem('mascotas', JSON.stringify(mascotas))
 }
 
+function agregarMascota(mascota) {
+    mascotas.push(mascota);
+    guardarEnLocalStorage();
+    render();
+}
+
 function eliminarMascota(id) {
     const indice = mascotas.findIndex((mascota) => mascota.idMascota === id);
     mascotas.splice(indice, 1);
@@ -84,10 +90,7 @@ formularioAgregar.addEventListener('submit', (evento) => {
             edad: Number(datos.get('edad')),
             peso: parseFloat(datos.get('peso'))
         }
-        mascotas.push(nuevaMascota);
-        
-        guardarEnLocalStorage();
-        render();
+        agregarMascota(nuevaMascota);
         modalAgregar.hide();
         formularioAgregar.reset();
 
