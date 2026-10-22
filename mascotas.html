@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Institucional | Veterinaria El Cachilo</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/institucional.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="shortcut icon" href="./assets/images/logo_icono.ico"/>
+
+  <script defer src="./js/mascotas.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+          <div class="container">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="./index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./institucional.html">Institucional</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./contacto.html">Contacto</a>
+                      </li>
+                       <li class="nav-item">
+                          <a class="nav-link active fw-semibold" href="./mascotas.html">Mascotas</a>
+                      </li>
+                  </ul>
+
+                  <div class="d-flex gap-2 flex-wrap">
+                      <a href="./sitio_en_construccion.html" class="btn btn-success btn-sm px-3">Pedir Turno</a>
+                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Socios</a>
+                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Profesionales</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+  <main>
+        <section class="banner position-relative">
+          <img src="./assets/images/perro_gato.png" class="w-100" alt="Perro y gato en clínica">
+            <div class="position-absolute top-50 start-50 translate-middle text-center px-3">
+                <div class="banner-text">
+                    <h1>Cuidando a tus mascotas con dedicación y amor</h1>
+                </div>
+             </div>
+        </section>
+
+        #MASCOTAS        
+        <section class="container py-5">
+            <div class="row g-4">
+
+                <article class="col-12 col-lg-7">
+                    <span class="badge rounded-pill text-bg-primary fw-semibold">MASCOTAS</span>
+                        <h2 class="fs-1 fw-semibold mt-2">
+                            Mascotas Registradas 
+                            <span class="badge text-bg-secondary align-middle fs-5" id="total_mascotas">
+                            0
+                            </span>
+                        </h2>
+
+                    <div class="table-responsive-md">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                <th>Dueño</th>
+                                <th>Mascota</th>
+                                <th>Color</th>
+                                <th>Edad</th>
+                                <th>Peso</th>
+                                <!-- <th>Imagen</th>
+                                <th>Acciones</th> -->
+                                </tr>
+                            </thead>
+                            <tbody id="listar_mascotas">
+                        
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="col-12 col-lg-5">
+
+                    <form class="d-flex flex-column gap-3 p-4 bg-body-tertiary rounded-4" id="form-mascota">
+                        <h3 class="fs-4">Nueva Mascota</h3>
+
+                        <div>
+                            <label for="nombreDuenio" class="form-label">Dueño</label>
+                            <input type="text" name="nombreDuenio" id="nombreDuenio" class="form-control" required>
+                        </div>
+
+                        <div>
+                            <label for="nombreMascota" class="form-label">Nombre de la Mascota</label>
+                            <input type="text" name="nombreMascota" id="nombreMascota" class="form-control" required>
+                        </div>
+
+                        <div>
+                            <label for="color" class="form-label">Color</label>
+                            <input type="text" name="color" id="color" class="form-control" required>
+                        </div>
+
+                        <div>
+                            <label class="form-label" for="edad">Edad</label>
+                            <input class="form-control" type="number" name="edad" id="edad" min="0" max="30" required>
+                        </div>
+
+                        <div>
+                            <label class="form-label" for="peso">Peso en kg</label>
+                            <input class="form-control" type="number" name="peso" id="peso" min="0" step="0.01" placeholder="Ejemplo 4.5" required>
+                        </div>
+
+                        <!-- <div>
+                        <label class="form-label" for="imagenMascota">Imagen de la Mascota</label>
+                        <input class="form-control" type="file" name="imagenMascota" id="imagenMascota" accept=".png,.jpg,.jpeg"  required>
+                        </div> -->
+
+                        <button id="botonAgregarMascota" class="btn btn-primary" type="submit">Agregar Mascota</button>
+                    </form>
+
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="contenedor_footer">
+        <div class="container">
+            <div class="row justify-content-center g-4 py-0">
+                <div class="col-sm-12 col-lg-4">
+                    <h3 class = "display-8 fw-bolder m-3 text-center">Somos El Cachilo, una veterinaria con atención especializada,
+                        diagnóstico por imágenes, laboratorio, cirugías, internación
+                        y guardia las 24hs.
+                        Brindamos atención integral para perros
+                        y gatos en el corazón de Frías, Santiago del Estero.</h3>
+                </div>
+
+                <div class="col">
+                    <h2 class="display-6 text-center m-3">Nuestras Redes:</h2>
+                    <div class="ico_redes justify-content-center">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="./assets/images/Redes/1491580635-yumminkysocialmedia26_83102.ico" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="./assets/images/Redes/facebook_logo_icon_147291.ico" alt="Facebook">
+                        </a>
+                        <a href="https://web.whatsapp.com/" target="_blank">
+                            <img src="./assets/images/Redes/whatsapp_logo_icon_186881.ico" alt="Whatsapp">
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank">
+                            <img src="./assets/images/Redes/tiktok_logo_icon_187623.ico" alt="Tik Tok">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-lg-4">
+                    <div class="direccion">
+                        <h2 class="display-6 fw-bolder mt-3 text-center">Nuestros horarios:</h2>
+                        <p class="fs-3 fw-bolder m-0 text-center">Lunes a Viernes: 09:00 a 20:00 hs. <br>
+                            Sábados: 09:00 a 13:00 hs. <br>
+                            Urgencias las 24 hs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
