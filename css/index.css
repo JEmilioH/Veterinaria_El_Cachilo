@@ -59,30 +59,11 @@ body {
     text-align: center;
 }
 
-.profesionales .card {
-    height: 40rem;
+.card {
+    height: auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 4px 4px 10px var(--color-borde-1)
-}
-
-.profesionales .card-img-top {
-    height: 25rem;
-    object-fit: cover;
-}
-
-.profesionales .card-body {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.profesionales .card-text {
-    flex-grow: 1;
-}
-
-.profesionales .card-body .btn {
-    margin-top: auto;
 }
 
 .item-carousel {

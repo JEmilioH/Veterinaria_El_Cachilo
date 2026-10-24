@@ -1,0 +1,43 @@
+/* Estilos específicos de la página de gestión de veterinarios */
+
+main {
+    min-height: 60vh;
+}
+
+.table th {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn-accion {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.875rem;
+}
+
+#mensajeVacio {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 767.98px) {
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+
+    .btn-accion {
+        padding: 0.2rem 0.45rem;
+        font-size: 0.8rem;
+    }
+}

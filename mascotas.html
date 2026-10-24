@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Institucional | Veterinaria El Cachilo</title>
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/mascota.css">
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="shortcut icon" href="./assets/images/logo_icono.ico"/>
-
-  <script defer src="./js/mascotas.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Institucional | Veterinaria El Cachilo</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mascota.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="shortcut icon" href="./assets/images/logo_icono.ico"/>
+    
+    <script defer src="./js/mascotas.js"></script>
 </head>
 
 <body>
-  <header>
-    <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-          <div class="container">
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">INFORMACIÓN</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Función no habilitada. Comuniquese con el administrador del sistema.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
 
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link" href="./index.html">Inicio</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="./institucional.html">Institucional</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="./contacto.html">Contacto</a>
-                      </li>
-                       <li class="nav-item">
-                          <a class="nav-link active fw-semibold" href="./mascotas.html">Mascotas</a>
-                      </li>
-                  </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                  <div class="d-flex gap-2 flex-wrap">
-                      <a href="./sitio_en_construccion.html" class="btn btn-success btn-sm px-3">Pedir Turno</a>
-                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Socios</a>
-                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Profesionales</a>
-                  </div>
-              </div>
-          </div>
-      </nav>
-  </header>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./institucional.html">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active fw-semibold" href="#" id="adminDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Administración
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                                <li><a class="dropdown-item active" href="./mascotas.html">Mascotas</a></li>
+                                <li><a class="dropdown-item" href="./veterinarios.html">Veterinarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-  <main>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Pedir Turno
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
         <section class="banner position-relative">
-          <img src="./assets/images/Mascotas.webp" class="w-100" alt="Perro y gato en clínica">
+            <img src="./assets/images/Mascotas.webp" class="w-100" alt="Perro y gato en clínica">
             <div class="position-absolute top-50 start-50 translate-middle text-center px-3">
                 <div class="banner-text">
                     <h1>Nuestras Mascotas</h1>
                 </div>
-             </div>
+            </div>
         </section>
 
         <!-- MASCOTAS         -->

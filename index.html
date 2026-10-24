@@ -10,47 +10,74 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="./assets/images/logo_icono.ico" />
     <title>Inicio | Veterinaria El Cachilo</title>
+
+    <script defer src="./js/index.js"></script>
 </head>
 
 <body>
     <!-- Se utiliza bootstrap.bundle.min.js para que funcionen los botones adelante y atrás del carrousel-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">INFORMACIÓN</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Función no habilitada. Comuniquese con el administrador del sistema.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
     <header>
-    <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-          <div class="container">
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+        <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
 
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link active fw-semibold" href="./index.html">Inicio</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="./institucional.html">Institucional</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="./contacto.html">Contacto</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="./mascotas.html">Mascotas</a>
-                      </li>
-                  </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                  <div class="d-flex gap-2 flex-wrap">
-                      <a href="./sitio_en_construccion.html" class="btn btn-success btn-sm px-3">Pedir Turno</a>
-                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Socios</a>
-                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Profesionales</a>
-                  </div>
-              </div>
-          </div>
-      </nav>
-  </header>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./institucional.html">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active fw-semibold" href="#" id="adminDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Administración
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                                <li><a class="dropdown-item" href="./mascotas.html">Mascotas</a></li>
+                                <li><a class="dropdown-item" href="./veterinarios.html">Veterinarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Pedir Turno
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="main">
         <section class="hero">
@@ -70,68 +97,8 @@
                 <div class="row py-4">
                     <h1 class="display-6 fw-medium text-center">NUESTROS ESPECIALISTAS</h1>
                 </div>
-                <div class="row justify-content-center g-4 py-0">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/veterinario-1.gif" class="card-img-top" alt="Médico veterinario">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Dra. Sandra Gómez</h5>
-                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, in! Numquam beatae officia hic porro magni quibusdam error necessitatibus illo?</p>
-                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/veterinario-2.jfif" class="card-img-top" alt="Médico Veterinario">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Dr. Juan Pérez</h5>
-                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor deleniti perferendis ipsa magnam nemo velit vero maxime! Tempora, quasi doloribus.</p>
-                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/veterinario-3.avif" class="card-img-top" alt="Médico Veterinario">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Dra. Alicia Bustamante</h5>
-                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quidem quae recusandae quos quaerat libero, ad aliquam qui esse facilis?</p>
-                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/veterinario-4.jfif" class="card-img-top" alt="Médico Veterinario">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Dr. Eduardo Montoya</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, distinctio fugiat optio similique impedit eius ea rem asperiores quidem odio.</p>
-                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/tecnico_imagenes.jpg" class="card-img-top" alt="Técnico en Imágenes">
-                            <div class="card-body">
-                                <h5 class="card-title">Lic. Mariano Gómez</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ratione ut fugit ipsa magni reiciendis explicabo ipsam itaque tenetur voluptate.</p>
-                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/bioquimica-1.avif" class="card-img-top" alt="Bioquímica">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lic. Sandra Santiago</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam rem facilis magni veniam ea ipsa inventore sapiente. Recusandae, quidem eveniet.</p>
-                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>               
+                <div id="listaVeterinarios" class="row justify-content-center g-4 py-0">
+                </div>
             </div>
         </section>
 

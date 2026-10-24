@@ -11,41 +11,65 @@
     <title>Contacto</title>
 </head>
 <body>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">INFORMACIÓN</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Función no habilitada. Comuniquese con el administrador del sistema.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <header>
-    <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
+        <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-          <div class="container">
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link" href="./index.html">Inicio</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="./institucional.html">Institucional</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link active fw-semibold" href="./contacto.html">Contacto</a>
-                      </li>
-                       <li class="nav-item">
-                          <a class="nav-link" href="./mascotas.html">Mascotas</a>
-                      </li>
-                  </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./institucional.html">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active fw-semibold" href="#" id="adminDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Administración
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                                <li><a class="dropdown-item" href="./mascotas.html">Mascotas</a></li>
+                                <li><a class="dropdown-item" href="./veterinarios.html">Veterinarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                  <div class="d-flex gap-2 flex-wrap">
-                      <a href="./sitio_en_construccion.html" class="btn btn-success btn-sm px-3">Pedir Turno</a>
-                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Socios</a>
-                      <a href="./sitio_en_construccion.html" class="btn btn-outline-secondary btn-sm">Acceso Profesionales</a>
-                  </div>
-              </div>
-          </div>
-      </nav>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Pedir Turno
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
