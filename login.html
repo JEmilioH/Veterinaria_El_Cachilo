@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Institucional | Veterinaria El Cachilo</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="shortcut icon" href="./assets/images/logo_icono.ico"/>
+
+    <script defer src="js/sesion.js"></script>
+    <script defer src="js/header.js"></script>
+    <script defer src="./js/footer.js"></script>
+
+    <script defer src="/js/login.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
+
+        <nav class="barraNavegacion navbar navbar-expand-lg navbar-light bg-white sticky-top">
+            
+        </nav>
+    </header>
+
+    <main>
+        <section class="container py-5 position-relative">
+            <div class="row justify-content-center g4 align-items-center">
+                <article class="col-12 col-md-6">
+                    <form id="login-form" class="d-flex flex-column gap-3 p-4">
+                        <h3 class="fs-4"> Iniciar Sesion </h3>
+                        <div>
+                            <label for="nombre-usuario" class="form-label">Nombre de Usuario</label>
+                            <input type="text" class="form-control" id="nombre-usuario" name="nombre-usuario" placeholder="Ingrese su nombre de usuario" required>
+                        </div>
+                        <div>
+                            <label for="contrasenia" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <span id="msj-error" class="text-danger"></span>
+                        <button type="submit" class="btn btn-primary" id="boton-login">Iniciar Sesion</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contenedor_footer">
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,3 +1,8 @@
+if (!estaLogueado()){
+    window.location.href = 'login.html'
+}
+
+
 const mascotas = JSON.parse(localStorage.getItem('mascotas')) || [];
 const listarMascotas = document.getElementById('listar_mascotas');
 const totalMascotas = document.getElementById('total_mascotas');

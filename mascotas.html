@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="./css/mascota.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="shortcut icon" href="./assets/images/logo_icono.ico"/>
+    <!-- Antes va sesion.js para que al abrir mascotas tome la funcion
+     de 'estaLogueado' -->
+    <script defer src="./js/sesion.js"></script>
+    <script defer src="./js/header.js"></script>
+    <script defer src="./js/footer.js"></script>
     
     <script defer src="./js/mascotas.js"></script>
+    
 </head>
 
 <body>
@@ -33,44 +39,8 @@
     <header>
         <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./institucional.html">Institucional</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active fw-semibold" href="#" id="adminDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Administración
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="adminDropdown">
-                                <li><a class="dropdown-item active" href="./mascotas.html">Mascotas</a></li>
-                                <li><a class="dropdown-item" href="./veterinarios.html">Veterinarios</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <div>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Pedir Turno
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <nav class="barraNavegacion navbar navbar-expand-lg navbar-light bg-white sticky-top">
+         
         </nav>
     </header>
 
@@ -217,44 +187,6 @@
     </main>
 
     <footer class="contenedor_footer">
-        <div class="container">
-            <div class="row justify-content-center g-4 py-0">
-                <div class="col-sm-12 col-lg-4">
-                    <h3 class = "display-8 fw-bolder m-3 text-center">Somos El Cachilo, una veterinaria con atención especializada,
-                        diagnóstico por imágenes, laboratorio, cirugías, internación
-                        y guardia las 24hs.
-                        Brindamos atención integral para perros
-                        y gatos en el corazón de Frías, Santiago del Estero.</h3>
-                </div>
-
-                <div class="col">
-                    <h2 class="display-6 text-center m-3">Nuestras Redes:</h2>
-                    <div class="ico_redes justify-content-center">
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img src="./assets/images/Redes/1491580635-yumminkysocialmedia26_83102.ico" alt="Instagram">
-                        </a>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img src="./assets/images/Redes/facebook_logo_icon_147291.ico" alt="Facebook">
-                        </a>
-                        <a href="https://web.whatsapp.com/" target="_blank">
-                            <img src="./assets/images/Redes/whatsapp_logo_icon_186881.ico" alt="Whatsapp">
-                        </a>
-                        <a href="https://www.tiktok.com/" target="_blank">
-                            <img src="./assets/images/Redes/tiktok_logo_icon_187623.ico" alt="Tik Tok">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-lg-4">
-                    <div class="direccion">
-                        <h2 class="display-6 fw-bolder mt-3 text-center">Nuestros horarios:</h2>
-                        <p class="fs-3 fw-bolder m-0 text-center">Lunes a Viernes: 09:00 a 20:00 hs. <br>
-                            Sábados: 09:00 a 13:00 hs. <br>
-                            Urgencias las 24 hs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </footer>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
