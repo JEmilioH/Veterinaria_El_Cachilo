@@ -41,8 +41,6 @@ if (estaLogueado()){
     `;
     const usuarioActual= document.getElementById("nombreUsuario")
     usuarioActual.textContent = usuario;
-    const pestaniaActualActiva = document.querySelector(`.${pestaniaActual}`);
-    pestaniaActualActiva.classList.add("active");
 
 } else {
     itemsNav.innerHTML += `
@@ -53,13 +51,13 @@ if (estaLogueado()){
             <div class="barraNavegacion collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Inicio</a>
+                        <a class="nav-link nav-item-index" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./institucional.html">Institucional</a>
+                        <a class="nav-link nav-item-institucional" href="./institucional.html">Institucional</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                        <a class="nav-link nav-item-contacto" href="./contacto.html">Contacto</a>
                     </li>
 
                 </ul>
@@ -78,3 +76,6 @@ if (estaLogueado()){
         </div>
     `
 }
+
+const pestaniaActualActiva = document.querySelector(`.${pestaniaActual}`);
+pestaniaActualActiva.classList.add("active");
