@@ -53,27 +53,6 @@ function render() {
     totalVeterinarios.textContent = `Total: ${veterinarios.length}`;
 }
 
-    veterinarios.forEach((vet) => {
-        listarVeterinarios.innerHTML += `
-            <tr>
-                <td>${vet.matricula}</td>
-                <td>${vet.nombre}</td>
-                <td>${vet.especializacion}</td>
-                <td>${formatearMoneda(vet.valorConsulta)}</td>
-                <td class="text-end">
-                    <button class="btn btn-warning btn-sm me-1" onclick="editarVeterinario('${vet.idVeterinario}')">
-                        Editar
-                    </button>
-                    <button class="btn btn-danger btn-sm" onclick="pedirEliminar('${vet.idVeterinario}', '${vet.nombre}')">
-                        Eliminar
-                    </button>
-                </td>
-            </tr>
-        `;
-    });
-
-    totalVeterinarios.textContent = `Total: ${veterinarios.length}`;
-
 function formatearMoneda(valor) {
     return Number(valor).toLocaleString('es-AR', {
         style: 'currency',

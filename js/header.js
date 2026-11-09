@@ -25,6 +25,7 @@ if (estaLogueado()){
                         <ul class="dropdown-menu" aria-labelledby="adminDropdown">
                             <li><a class="dropdown-item" href="./mascotas.html">Mascotas</a></li>
                             <li><a class="dropdown-item" href="./veterinarios.html">Veterinarios</a></li>
+                            <li><a class="dropdown-item" href="./turnos.html">Turnos</a></li>
                         </ul>
                     </li>   
                     <li>
