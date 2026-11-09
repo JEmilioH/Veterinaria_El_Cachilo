@@ -44,50 +44,43 @@
         </nav>
     </header>
 
-    <main>
-        <section class="banner position-relative">
-            <img src="./assets/images/Mascotas.webp" class="w-100" alt="Perro y gato en clínica">
-            <div class="position-absolute top-50 start-50 translate-middle text-center px-3">
-                <div class="banner-text">
-                    <h1>Nuestras Mascotas</h1>
-                </div>
+    <main class="container my-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+            <div>
+                <h1 class="display-6 fw-bold mb-1">Gestión de Mascotas</h1>
+                <p class="text-muted mb-0">Alta, baja, modificación y listado de animales</p>
             </div>
-        </section>
+            <button type="button" class="btn btn-success" id="btnNuevaMascota" data-bs-toggle="modal" data-bs-target="#modalMascota">
+                Nueva Mascota
+            </button>
+        </div>
 
         <!-- MASCOTAS         -->
         <section class="container py-5">
-            <div class="row g-4">
+            <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="card-title mb-0">Listado de Mascotas</h5>
+                    <span class="badge bg-primary fs-6" id="total_mascotas">Total: 0</span>
+                </div>
 
-                <article class="col-12">
-                    <h2 class="fs-1 fw-semibold mt-2">
-                        Mascotas Registradas 
-                        <span class="badge text-bg-secondary align-middle fs-5" id="total_mascotas">
-                        0
-                        </span>
-
-                        <button class="btn btn-primary text-align-right float-end" onclick="modalAgregar.show()">
-                        Agregar mascota
-                        </button>
-                    </h2>
-
-                    <div class="table-responsive-md">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
+                <div class="table-responsive-md">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
                                 <th>Dueño</th>
                                 <th>Mascota</th>
                                 <th>Color</th>
                                 <th>Edad</th>
                                 <th>Peso</th>
                                 <!-- <th>Imagen</th> -->
-                                </tr>
-                            </thead>
-                            <tbody id="listar_mascotas">
+                            </tr>
+                        </thead>
+                        <tbody id="listar_mascotas">
                         
-                            </tbody>
-                        </table>
-                    </div>
-                </article>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
