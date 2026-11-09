@@ -44,7 +44,7 @@ function render() {
         `
     });
     
-    totalMascotas.textContent = mascotas.length;
+    totalMascotas.textContent = "Total: " + mascotas.length;
 };
 
 // Usamos un render aquí para que actualice al abrir el navegador
