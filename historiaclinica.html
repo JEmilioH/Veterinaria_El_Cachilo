@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Historial Clínico | Veterinaria El Cachilo</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="shortcut icon" href="./assets/images/logo_icono.ico"/>
+
+    <script defer src="./js/sesion.js"></script>
+    <script defer src="./js/header.js"></script>
+    <script defer src="./js/footer.js"></script>
+    <script defer src="./js/historiaclinica.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/images/logo 200px.png" alt="Veterinaria El Cachilo" height="80">
+        <nav id="nav-item-historial_clinico" class="barraNavegacion navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+            <div>
+                <h1 class="display-6 fw-bold mb-1">Historial Clínico</h1>
+                <p class="text-muted mb-0">Consultas, diagnósticos y tratamientos de cada mascota</p>
+            </div>
+            <button type="button" class="btn btn-success" id="btnNuevaConsulta" data-bs-toggle="modal" data-bs-target="#modal-consulta">
+                + Nueva Consulta
+            </button>
+        </div>
+
+        <section class="card shadow-sm border-0 mb-4" aria-labelledby="tituloMascota">
+            <div class="card-body">
+                <h2 class="h5 card-title mb-3" id="tituloMascota">Seleccionar mascota</h2>
+                <label for="mascotaSeleccionada" class="form-label">Mascota</label>
+                <select id="mascotaSeleccionada" class="form-select" aria-describedby="ayudaMascota">
+                    <option value="">Seleccione una mascota</option>
+                </select>
+                <div id="ayudaMascota" class="form-text">Elegí una mascota para consultar su historial completo.</div>
+                <div id="mensajeDisponibilidad" class="alert alert-warning mt-3 mb-0 d-none" role="status"></div>
+                <div id="datosMascota" class="mt-3 text-muted"></div>
+            </div>
+        </section>
+
+        <section class="card shadow-sm border-0" aria-labelledby="tituloHistorial">
+            <div class="card-body">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3 gap-2">
+                    <h2 class="h5 card-title mb-0" id="tituloHistorial">Consultas médicas</h2>
+                    <span class="badge bg-primary fs-6" id="totalConsultas">Total: 0</span>
+                </div>
+                <div id="listaHistorial" class="d-flex flex-column gap-3"></div>
+                <div id="mensajeVacioHistorial" class="text-center text-muted py-5">
+                    <p class="mb-0">Seleccioná una mascota para ver su historial clínico.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="modal-consulta" tabindex="-1" aria-labelledby="modalConsultaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <form id="form-consulta" class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalConsultaLabel">Nueva Consulta Médica</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body d-flex flex-column gap-3">
+                    <div>
+                        <label for="mascotaConsulta" class="form-label">Mascota *</label>
+                        <select id="mascotaConsulta" name="mascotaConsulta" class="form-select" required>
+                            <option value="">Seleccione una mascota</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="fechaConsulta" class="form-label">Fecha de consulta *</label>
+                        <input type="date" id="fechaConsulta" name="fechaConsulta" class="form-control" required>
+                    </div>
+                    <div>
+                        <label for="motivoConsulta" class="form-label">Motivo de la consulta *</label>
+                        <input type="text" id="motivoConsulta" name="motivoConsulta" class="form-control" maxlength="160" required>
+                    </div>
+                    <div>
+                        <label for="veterinarioConsulta" class="form-label">Profesional veterinario *</label>
+                        <select id="veterinarioConsulta" name="veterinarioConsulta" class="form-select" required>
+                            <option value="">Seleccione un veterinario</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="diagnosticoConsulta" class="form-label">Diagnóstico *</label>
+                        <textarea id="diagnosticoConsulta" name="diagnosticoConsulta" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div>
+                        <label for="tratamientoConsulta" class="form-label">Tratamiento *</label>
+                        <textarea id="tratamientoConsulta" name="tratamientoConsulta" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div>
+                        <label for="proximaVisita" class="form-label">Próxima visita (opcional)</label>
+                        <input type="date" id="proximaVisita" name="proximaVisita" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="btnGuardarConsulta">Guardar Consulta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="contenedor_footer">
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

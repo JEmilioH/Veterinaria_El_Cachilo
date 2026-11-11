@@ -29,6 +29,7 @@ if (estaLogueado()){
                             <li><a class="dropdown-item nav-item-mascotas" href="./mascotas.html">Mascotas</a></li>
                             <li><a class="dropdown-item nav-item-veterinarios" href="./veterinarios.html">Veterinarios</a></li>
                             <li><a class="dropdown-item nav-item-turnos" href="./turnos.html">Turnos</a></li>
+                            <li><a class="dropdown-item nav-item-historial_clinico" href="./historiaclinica.html">Historial Clínico</a></li>
                         </ul>
                     </li>   
                     <li>
